@@ -24,11 +24,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// const cors = require('cors');
-// app.use(cors({
-//     origin: 'https://votre-frontend-url.onrender.com', // L'URL de votre frontend
-//     methods: ['GET', 'POST'],
-// }));
+ const cors = require('cors');
+ app.use(cors({
+     origin: 'https://shopinfo.onrender.com', // L'URL de votre frontend
+     methods: ['GET', 'POST'],
+ }));
 
 // app.get('/api/keys/paypal', (req, res) => {
 //   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
